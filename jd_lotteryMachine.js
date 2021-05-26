@@ -7,6 +7,7 @@ github： https://github.com/yangtingxiao
 修改自用 By lxk0301
 更新时间：2021-05-25 8:50
  */
+delete process.env.GITHUB;
 const $ = new Env('京东抽奖机&内部互助');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
@@ -16,6 +17,7 @@ Object.keys(jdCookieNode).forEach((item) => {
   cookiesArr.push(jdCookieNode[item])
 })
 if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {};
+
 
 const appIdArr = ['1EFRRxA','1EFRQwA','1EFRYxQ','1EFRXxg','1EFVRwA','1EFVRxw','1EFRZwA','1EFRZwQ','1EFRYwA'];
 const homeDataFunPrefixArr = ['interact_template','interact_template','harmony_template','','','','','','','','','','','','','','','interact_template','interact_template'];
