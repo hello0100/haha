@@ -26,8 +26,8 @@ $.allShareId = {};
 main();
 async function main() {
   await help();//先账号内部互助
-  // await updateShareCodes();
-  // if (!$.body) await updateShareCodesCDN();
+  await updateShareCodes();
+  if (!$.body) await updateShareCodesCDN();
   if ($.body) {
     eval($.body);
   }
