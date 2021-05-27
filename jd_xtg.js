@@ -26,7 +26,8 @@ cron "0 0 0 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/j
 ============小火箭=========
 家电星推官 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xtg.js, cronexpr="0 0 0 * * *", timeout=3600, enable=true
  */
-process.env.GITHUB = undefined
+process.env.GITHUB = undefined;
+delete process.env.GITHUB;
 const $ = new Env("家电星推官");
 const activeEndTime = "2021/06/18 23:59:59+08:00"; //活动结束时间
 const notify = $.isNode() ? require("./sendNotify") : "";
